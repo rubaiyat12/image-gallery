@@ -94,12 +94,12 @@ const PhotoGrid = () => {
     };
 
     return (
-        <div className='md:w-2/3 mx-auto border-2 bg-white md:my-4 rounded border-slate-300 '>
+        <div className='md:w-2/3 mx-auto border bg-white md:my-4  border-slate-300  rounded'>
             <Header
                 selectedComponents={selectedComponents}
                 handleTodeleteSelectedComponents={handleTodeleteSelectedComponents}
             ></Header>
-            <div className="grid xl:grid-cols-5 lg:grid-cols-3 object-contain sm:grid-cols-2 sm:gap-6 gap-3 sm:px-6 px-2 my-6">
+            <div className="grid xl:grid-cols-5  lg:grid-cols-3 object-contain sm:grid-cols-2 sm:gap-6 gap-3 sm:px-6 px-2 my-6">
                 {
                 imageComponents.map((imageComponent, index) => (
                     <PhotoCard

@@ -18,8 +18,8 @@ const ImageAdd = ({ handleAddImage}) => {
                 onChange={handleImageChange}
             />
             <div className="h-full w-full flex flex-col justify-center items-center gap-y-1">
-                <img alt="placeholder" fetchpriority="high" decoding="async" data-nimg="1" src="addimage.png" />
-                <div className="text-center text-xs">Add Images</div>
+                <img alt="" fetchpriority="high" decoding="async" data-nimg="1" src="addimage.png" />
+                <div className="text-center font-semibold">Add Photo</div>
             </div>
         </div>
     );

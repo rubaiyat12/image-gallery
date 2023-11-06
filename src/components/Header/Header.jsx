@@ -25,8 +25,8 @@ const Header = ({selectedComponents,handleTodeleteSelectedComponents}) => {
 
               </div>
               <div className=" gap-2">
-                <div className="dropdown dropdown-end">
-                  <h3 onClick={handleTodeleteSelectedComponents} className='text-red-600 font-semibold text-lg 	'>Delete files</h3>
+                <div className="dropdown dropdown-end  hover:border-b-[1px] border-red-500 cursor-pointer">
+                  <h3 onClick={handleTodeleteSelectedComponents} className='text-red-500  text-xl   	'>Delete files</h3>
                 </div>
               </div>
             </div>
