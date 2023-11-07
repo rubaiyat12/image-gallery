@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { motion, useDragControls } from "framer-motion";
 
 const PhotoCard = ({ imageComponent, updateSelectedComponents, onToggleCheck,handleSort,index, onDragEnter, onDragStart }) => {
    
@@ -10,14 +11,19 @@ const PhotoCard = ({ imageComponent, updateSelectedComponents, onToggleCheck,han
     const dragOverItem = useRef(null);
 
     return (
-        <div
+        <motion.div
             className={` group border-2 rounded-lg  border-slate-300 relative ${index === 0 ? "col-span-2 row-span-2" : "col-span-1 row-span-1"} before:absolute before:h-full before:w-full rounded before:transition-colors before:cursor-move `}
             
+        
+           
             draggable
             onDragStart={ onDragStart}
             onDragEnter={onDragEnter}
             onDragEnd={handleSort}
             onDragOver={(e) => e.preventDefault()}
+            
+            // dragConstraints={{left:0 , bottom:0, top:0, right:0}}
+            // dragElastic={2}
         >
             <img
                 src={imageComponent.src}
@@ -36,7 +42,7 @@ const PhotoCard = ({ imageComponent, updateSelectedComponents, onToggleCheck,han
                 onChange={() => onToggleCheck(imageComponent.key)}
                 checked={imageComponent.isChecked}
             />
-        </div>
+        </motion.div>
     );
 };
 
